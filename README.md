@@ -1,54 +1,31 @@
-# ETP CONSULTORES — Sitio web (HTML + CSS + JS)
+# ETP Consultores — web actualizada
 
-Proyecto estático listo para usar. Incluye:
-- `index.html` con CSS embebido y JS ligero.
-- `assets/logo.png` (logo adjunto).
-- `assets/images/*.webp` (imágenes optimizadas para la web).
-- Diseño responsive (breakpoints 980px / 768px / 480px).
-- Menú móvil tipo drawer con animación slide-in.
-- Navegación activa por sección, scroll reveal y contador animado.
-- Botón “volver arriba”.
+Abre `index.html` para ver el sitio, o ejecuta `python3 -m http.server 8000` dentro de esta carpeta y entra a http://localhost:8000.
 
-## Cómo ejecutar (local)
-1) Descomprime el ZIP.
-2) Abre `index.html` en tu navegador.
+## Equipo
+Edita `assets/team.js`. Incluye dos integrantes: Marisa y Elizabeth. Completa el nombre, cargo, presentación, correo y URL personal de LinkedIn de cada una. Los valores vacíos no muestran enlaces. El correo de Elizabeth procede del proyecto original. No se han inventado correos, apellidos, cargos ni perfiles para Marisa. Se usan iniciales hasta disponer de retratos reales.
 
-> Recomendado: si usas VS Code, instala “Live Server” y abre con servidor local.
+## Identidad
+Adaptación vectorial del monograma aportado; variantes `assets/logo-horizontal.svg`, `assets/logo-horizontal-light.svg`, `assets/logo-mark.svg` y `assets/logo-mark-white.svg`. La tipografía del nombre se aproxima con Georgia. Favicon SVG y Apple Touch Icon. Los PNG históricos se han sustituido para evitar reutilizar la marca anterior.
 
-## Personalización rápida
-- Logo: reemplaza `assets/logo.png` (mantén el mismo nombre).
-- Colores: edita variables CSS en `:root` dentro de `index.html`.
-- Textos: busca las secciones por comentarios `SECCIÓN X`.
+## Enlaces institucionales
+- SUNAT: https://www.sunat.gob.pe/
+- Ministerio de Trabajo y Promoción del Empleo: https://www.gob.pe/mtpe
+- Colegio de Contadores Públicos de Lima: https://www.ccpl.org.pe/
+Se abren en otra pestaña. Los enlaces no implican afiliación del estudio.
 
-## Formulario de contacto
-Actualmente es **demostrativo**: valida campos y muestra un mensaje, pero **no envía** a un servidor.
-Para envío real, tienes dos opciones típicas:
-1) Conectar un endpoint propio (API) y enviar con `fetch`.
-2) Usar un servicio de formularios (si lo apruebas para producción).
+## Publicación y correo
+Sube todo el contenido a un hosting con PHP y correo saliente configurado. `server/send.php` envía a elizabeth.tocto@etpconsultores.com. El envío real depende de la configuración del hosting y no se ha probado enviando mensajes. Si falla, se ofrece abrir el cliente de correo o usar WhatsApp. El navegador exige una respuesta JSON `ok: true` antes de mostrar éxito.
 
-Si deseas, puedo adaptarlo a tu backend (Node/Spring) y dejarlo 100% operativo.
+## Mejoras
+Logo integrado en cabecera, menú móvil, portada y pie. Secciones de equipo y recursos. Menú adaptable a móvil y tablet, navegación activa corregida, gestión de foco y teclado en menú, contenido visible sin JavaScript y respeto a movimiento reducido. Sin frameworks ni dependencias de compilación. Las fuentes de Google y el mapa necesitan Internet.
 
-## Notas
-- El mapa se carga desde Google Maps (iframe). Puedes cambiar/eliminar el bloque “Mapa” si necesitas una web 100% offline.
-- El favicon usa el mismo `assets/logo.png`.
+Se conservan los servicios, textos comerciales, datos de empresa y redes institucionales del proyecto original. Confirma sus cifras y credenciales antes de publicar.
 
-© 2026 ETP Consultores (contenido de ejemplo).
-## Envío del formulario por correo (funcional)
+## Verificación
+Probado en Chromium a 1440, 1024, 390 y 320 px, sin desbordamiento horizontal, imágenes locales faltantes ni errores JavaScript. Menú móvil probado. Se verificaron con respuestas simuladas el fallo del servidor y la confirmación del formulario; no se enviaron correos reales.
 
-Este proyecto incluye un handler PHP: `server/send.php`.
+## Ajustes de equipo y ubicación
+Elizabeth aparece primero y Marisa después, en tarjetas compactas. Completa el correo de Marisa en `assets/team.js`: se mostrará en su tarjeta y en la sección de consulta. Hasta entonces se ofrece contacto mediante formulario. Cada integrante dispone de su propio campo `linkedin`; los botones aparecen al introducir una URL personal válida. El mapa ocupa todo el ancho, sin filtro gris, con altura de 460 px en escritorio y 360 px en móvil, y botones de ruta y apertura en Google Maps. La dirección conserva la del proyecto original.
 
-1. Sube la carpeta `etp-consultores/` a un hosting con **PHP**.
-2. Edita `server/send.php` y cambia:
-   - `$TO = 'contacto@etpconsultores.com';` por el **destinatario real**.
-3. Asegúrate de que el hosting tenga habilitado `mail()` (o un MTA configurado).
-
-Si tu hosting no soporta `mail()`, el formulario hará *fallback* a `mailto:` (abrirá el cliente de correo del usuario) y también te deja continuar por WhatsApp.
-
-## WhatsApp y redes sociales (links listos para reemplazar)
-
-En `index.html`, dentro del `<script>`, edita:
-
-- `CONFIG.whatsappPhone` (formato: **519XXXXXXXX** sin + ni espacios)
-- `CONFIG.social.linkedin` y `CONFIG.social.facebook`
-
-Los CTAs de **Cotizar por WhatsApp** y el botón flotante se generan automáticamente con esos valores.
+Ubicación actualizada desde el enlace proporcionado: https://maps.app.goo.gl/B8YuZF3TNLbAsAnZ9. Coordenadas obtenidas de la redirección de Google: -12.165185, -76.993231. El mapa incrustado y el botón Cómo llegar utilizan este punto exacto.

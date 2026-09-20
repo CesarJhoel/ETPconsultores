@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 }
 
 // ========= CONFIGURACIÓN =========
-$TO = 'contacto@etpconsultores.com'; // <-- Cambia aquí el destinatario real
+$TO = 'elizabeth.tocto@etpconsultores.com'; // Destinatario del estudio
 $SUBJECT = 'Nueva consulta web — ETP Consultores (Lima)';
 // ================================
 
@@ -52,7 +52,7 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
   exit;
 }
 
-$host = $_SERVER['HTTP_HOST'] ?? 'etpconsultores.com';
+$host = 'etpconsultores.com';
 $from = 'no-reply@' . preg_replace('/[^a-z0-9\.-]/i', '', $host);
 
 $bodyLines = [
