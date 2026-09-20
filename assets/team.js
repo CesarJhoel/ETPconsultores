@@ -9,11 +9,11 @@ window.ETP_TEAM = {
     email: 'elizabeth.tocto@etpconsultores.com',
     linkedin: ''
   },
-  marisa: {
-    name: 'Marisa',
+  maritza: {
+    name: 'Maritza Consuelo Huancahuire Diaz De Guerra',
     role: 'Equipo ETP Consultores',
     bio: 'Parte de nuestro equipo de trabajo.',
-    email: '',
+    email: 'maritza.hd@etpconsultores.com',
     linkedin: ''
   }
 };
